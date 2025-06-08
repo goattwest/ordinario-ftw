@@ -1,34 +1,120 @@
 <!DOCTYPE html>
-<html lang="mx">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Ajolote - login</title>
+    <title>El Ajolote - Iniciar Sesión</title>
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-    <header class="ParteDelHeader"></header>
+    <header class="ParteDelHeader" role="banner" aria-label="Encabezado principal de la página">
+        <h1 class="sr-only">El Ajolote - Página de Inicio de Sesión</h1>
+    </header>
 
-    <div class="PartePrincipal">
+    <main class="PartePrincipal" role="main" aria-label="Formulario de inicio de sesión">
         
-        <div class="ParteDelTitulo">
-            <h1 class="TituloLogin">El Ajolote</h1>
-        </div>
+        <section class="ParteDelTitulo" aria-labelledby="titulo-principal">
+            <h1 id="titulo-principal" class="TituloLogin">El Ajolote</h1>
+        </section>
 
-        <form id="Login" aria-label="Ingresa los datos para iniciar sesion en la pagina">
-            <fieldset class="Formulario">
-                <label for="Nombre" aria-label="Nombre de Usuario">Nombre de usuario</label>
-                <input type="text" id="username" placeholder="Ingrese su usuario">
-                <label id="errorUser" class="error" for="Error" hidden>Usuario vacío</label>
-                <label for="Contraseña" aria-label="Contraseña">Contraseña</label>
-                <input type="password" id="password" placeholder="Ingrese su contraseña">
-                <label id="errorPass" class="error" for="Error" hidden>Contraseña vacía</label>
-                <button type="button" class="BotonInicioSesion" aria-live="polite" onclick="validacionVacio()">Iniciar Sesion</button>
-            </fieldset>
-        </form>
-    </div>
+        <section aria-labelledby="form-titulo">
+            <h2 id="form-titulo" class="sr-only">Formulario de inicio de sesión</h2>
+            
+            <form 
+                id="Login" 
+                role="form"
+                aria-labelledby="form-titulo"
+                aria-describedby="form-descripcion"
+                novalidate
+            >
+                <p id="form-descripcion" class="sr-only">
+                    Complete los campos de usuario y contraseña para acceder al sitio
+                </p>
+                
+                <fieldset class="Formulario" role="group" aria-labelledby="credenciales-grupo">
+                    <legend id="credenciales-grupo" class="sr-only">Credenciales de acceso</legend>
+                    
+                    <label 
+                        for="username" 
+                        aria-label="Campo obligatorio para nombre de usuario"
+                    >
+                        Nombre de usuario <span aria-label="obligatorio">*</span>
+                    </label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username"
+                        placeholder="Ingrese su usuario"
+                        aria-required="true"
+                        aria-invalid="false"
+                        aria-describedby="errorUser username-help"
+                        autocomplete="username"
+                    >
+                    <p id="username-help" class="sr-only">
+                        Ingrese su nombre de usuario registrado
+                    </p>
+                    <label 
+                        id="errorUser" 
+                        class="error" 
+                        for="username" 
+                        role="alert"
+                        aria-live="polite"
+                        hidden
+                    >
+                        Usuario vacío
+                    </label>
+                    
+                    <label 
+                        for="password"
+                        aria-label="Campo obligatorio para contraseña"
+                    >
+                        Contraseña <span aria-label="obligatorio">*</span>
+                    </label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password"
+                        placeholder="Ingrese su contraseña"
+                        aria-required="true"
+                        aria-invalid="false"
+                        aria-describedby="errorPass password-help"
+                        autocomplete="current-password"
+                    >
+                    <p id="password-help" class="sr-only">
+                        Ingrese su contraseña
+                    </p>
+                    <label 
+                        id="errorPass" 
+                        class="error" 
+                        for="password" 
+                        role="alert"
+                        aria-live="polite"
+                        hidden
+                    >
+                        Contraseña vacía
+                    </label>
+                    
+                    <button 
+                        type="button" 
+                        class="BotonInicioSesion" 
+                        onclick="validacionVacio()"
+                        aria-describedby="boton-descripcion"
+                        aria-live="polite"
+                    >
+                        Iniciar Sesión
+                    </button>
+                    <p id="boton-descripcion" class="sr-only">
+                        Presione para validar sus credenciales e iniciar sesión
+                    </p>
+                </fieldset>
+            </form>
+        </section>
 
-    <footer class="ParteDelFooter"></footer>
+    </main>
+
+    <footer class="ParteDelFooter" role="contentinfo" aria-label="Pie de página">
+        <p class="sr-only">Fin del contenido de la página</p>
+    </footer>
 </body>
 
 <script src="./js/login.js"></script>

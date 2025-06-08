@@ -85,7 +85,8 @@ input[type="password"] {
   text-align: center;
 }
 
-.BotonInicioSesion, .BotonRegresar {
+.BotonInicioSesion,
+.BotonRegresar {
   margin: auto;
   border-radius: 15px;
   width: 150px;
@@ -99,7 +100,8 @@ input[type="password"] {
   font-size: 15px;
 }
 
-.BotonInicioSesion:hover, .BotonRegresar:hover {
+.BotonInicioSesion:hover,
+.BotonRegresar:hover {
   background-color: rgb(233, 184, 255);
   border: 3px solid rgb(187, 116, 181);
 }
@@ -143,4 +145,16 @@ th {
 
 td {
   padding: 20px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

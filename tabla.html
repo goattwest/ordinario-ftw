@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Ajolote - Tabla</title>
+    <title>El Ajolote - Tabla de Información</title>
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-    <header class="ParteDelHeader"></header>
+    <header class="ParteDelHeader" role="banner" aria-label="Encabezado principal de la página">
+        <h1 class="sr-only">El Ajolote - Tabla de Información</h1>
+    </header>
 
-    <div class="PartePrincipal">
-        <div class="ParteDeTabla">
-            <table id="demo"></table>
-        </div>
+    <main class="PartePrincipal" role="main" aria-label="Contenido principal con tabla de ajolotes">
+        
+        <section class="ParteDeTabla" aria-labelledby="tabla-titulo">
+            <h2 id="tabla-titulo" class="sr-only">Tabla de información sobre ajolotes</h2>
+            <div role="region" aria-label="Tabla de datos de ajolotes" tabindex="0">
+                <table id="demo" aria-label="Información detallada sobre diferentes tipos de ajolotes" aria-describedby="tabla-descripcion">
+                    <!-- El contenido de la tabla se genera dinámicamente con JavaScript -->
+                </table>
+                <p id="tabla-descripcion" class="sr-only">
+                    Esta tabla contiene información detallada sobre diferentes tipos de ajolotes, incluyendo sus características y propiedades.
+                </p>
+            </div>
+        </section>
 
-        <div class="ParteDelBoton">
-            <button class="BotonRegresar" onclick="window.location.href = './index.html'">Regresar</button>
-        </div>
-    </div>
+        <section class="ParteDelBoton" aria-labelledby="navegacion-titulo">
+            <h2 id="navegacion-titulo" class="sr-only">Contenedor del boton para regresar</h2>
+            <button 
+                class="BotonRegresar" 
+                onclick="window.location.href = './index.html'"
+                aria-label="Regresar a la página principal de El Ajolote"
+                type="button"
+            >
+                Regresar
+            </button>
+        </section>
 
-    <footer class="ParteDelFooter"></footer>
+    </main>
+
+    <footer class="ParteDelFooter" role="contentinfo" aria-label="Pie de página">
+        <p class="sr-only">Fin del contenido de la página</p>
+    </footer>
 </body>
 <script src="./js/tabla.js"></script>
 </html>
