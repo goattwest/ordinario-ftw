@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AJOLOTES> 
+    <AJOLOTE>
+        <NOMBRE>Ajolote Leucístico</NOMBRE>
+        <DESCRIPCION>Color rosado pálido con ojos negros. Es uno de los más comunes en cautiverio.</DESCRIPCION>
+    </AJOLOTE>
+    <AJOLOTE>
+        <NOMBRE>Ajolote Dorado</NOMBRE>
+        <DESCRIPCION>De color dorado brillante o amarillo claro, resultado de una mutación genética.</DESCRIPCION>
+    </AJOLOTE>
+    <AJOLOTE>
+        <NOMBRE>Ajolote Melánico</NOMBRE>
+        <DESCRIPCION>Color oscuro, casi negro, con manchas y una apariencia más salvaje.</DESCRIPCION>
+    </AJOLOTE>
+    <AJOLOTE>
+        <NOMBRE>Ajolote Albino</NOMBRE>
+        <DESCRIPCION>Completamente blanco o crema con ojos rosados, muy sensible a la luz.</DESCRIPCION>
+    </AJOLOTE>
+    <AJOLOTE>
+        <NOMBRE>Ajolote Salvaje</NOMBRE>
+        <DESCRIPCION>Color marrón oscuro o gris con motas doradas. Es el que se encuentra en estado natural.</DESCRIPCION>
+    </AJOLOTE>
+    <AJOLOTE>
+        <NOMBRE>Ajolote Cobre</NOMBRE>
+        <DESCRIPCION>Raro y de color cobrizo con ojos claros, resultado de una mezcla genética especial.</DESCRIPCION>
+    </AJOLOTE>
+</AJOLOTES>

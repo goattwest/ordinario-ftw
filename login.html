@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Ajolote - login</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <header class="ParteDelHeader"></header>
+
+    <div class="PartePrincipal">
+        
+        <div class="ParteDelTitulo">
+            <h1 class="TituloLogin">El Ajolote</h1>
+        </div>
+
+        <form id="Login" aria-label="Ingresa los datos para iniciar sesion en la pagina">
+            <fieldset class="Formulario">
+                <label for="Nombre" aria-label="Nombre de Usuario">Nombre de usuario</label>
+                <input type="text" id="username" placeholder="Ingrese su usuario">
+                <label id="errorUser" class="error" for="Error" hidden>Usuario vacío</label>
+                <label for="Contraseña" aria-label="Contraseña">Contraseña</label>
+                <input type="password" id="password" placeholder="Ingrese su contraseña">
+                <label id="errorPass" class="error" for="Error" hidden>Contraseña vacía</label>
+                <button type="button" class="BotonInicioSesion" aria-live="polite" onclick="validacionVacio()">Iniciar Sesion</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <footer class="ParteDelFooter"></footer>
+</body>
+
+<script src="./js/login.js"></script>
+
+</html>

@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 200;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-image: url("https://images.vexels.com/media/users/3/269935/raw/0886162141e459144c8302f539a538a9-diseno-de-patron-de-axolotl-kawaii.jpg");
+  background-size: cover;
+}
+
+.ParteDelFooter,
+.ParteDelHeader {
+  background: linear-gradient(to right, pink, rgb(202, 148, 202), lavender);
+  height: 100px;
+  max-width: 1900px;
+  align-content: center;
+  font-size: large;
+}
+
+.PartePrincipal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(90vh - 80px);
+  padding: 40px 20px;
+}
+
+.ParteDelTitulo {
+  background-color: white;
+  box-shadow: 0px 30px 30px 15px rgb(233, 184, 255);
+  border-radius: 20px;
+  width: 150px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.TituloLogin {
+  font-size: 35px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: rgb(202, 148, 202);
+  text-shadow: 
+        /* Borde */ -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 2px 2px 0 #000, -2px 0px 0 #000, 2px 0px 0 #000,
+    0px -2px 0 #000, 0px 2px 0 #000,
+    /* Sombra adicional para profundidad */ 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.Formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 300px;
+  max-height: 1500px;
+  padding: 50px;
+  box-shadow: 0px 30px 30px 15px rgb(233, 184, 255);
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  align-content: center;
+}
+
+label {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.error {
+  margin-top: -10px;
+  color: red;
+  font-size: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  border-radius: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  background-color: rgb(233, 184, 255);
+  border-color: rgba(226, 43, 89, 0);
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.BotonInicioSesion, .BotonRegresar {
+  margin: auto;
+  border-radius: 15px;
+  width: 150px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  border: none;
+  background-color: palegoldenrod;
+  border: 3px solid rgb(247, 213, 119);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 15px;
+}
+
+.BotonInicioSesion:hover, .BotonRegresar:hover {
+  background-color: rgb(233, 184, 255);
+  border: 3px solid rgb(187, 116, 181);
+}
+
+.ParteDeTabla {
+  background-color: rgba(255, 240, 245, 0.75);
+  padding: 50px;
+  border-radius: 25px;
+  margin-bottom: 15px;
+}
+
+.ParteDelBoton {
+  background-color: rgba(255, 240, 245, 0.75);
+  padding: 25px;
+  border-radius: 25px;
+}
+
+tr {
+  border: 5px solid black;
+}
+
+table {
+  border: 5px solid black;
+  border-radius: 15px;
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: lavenderblush;
+}
+
+td,
+th {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+td {
+  padding: 20px;
+}
