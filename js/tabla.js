@@ -1,3 +1,6 @@
+/*
+Se cargan los datos del archivo XML que ocupamos y obtiene los datos del elemento "AJOLOTE"
+*/
 function loadXMLDoc() {
     const xhttp = new XMLHttpRequest();
     xhttp.onload = function () {
@@ -9,6 +12,10 @@ function loadXMLDoc() {
     xhttp.send();
 }
 
+/*
+Genera una tabla HTML con los datos de los ajolotes obtenidos del XML.
+Crea las filas con nombre y descripción de cada ajolote y las inserta en el elemento "demo" (Nuestra tabla pues).
+*/
 function myFunction(ajolotes) {
     let table = "<thead><tr><th scope='col' id='nombre-header'>Nombre</th><th scope='col' id='descripcion-header'>Descripción</th></tr></thead><tbody>";
     
@@ -26,13 +33,19 @@ function myFunction(ajolotes) {
     document.getElementById("demo").innerHTML = table;
     
     addTableKeyboardNavigation();
-    announceToScreenReader(`Tabla cargada con ${ajolotes.length} tipos de ajolotes`);
 }
 
+/*
+Añade la funcion de poder moverse por cada indice dentro de la tabla con las flechas
+mejorando la navegación de esta. 
+*/
 function addTableKeyboardNavigation() {
     const table = document.getElementById("demo");
     const cells = table.querySelectorAll('td[tabindex="0"]');
     
+    /*
+    Agrega un evento de teclado a cada celda de la tabla para permitir navegación con flechas
+    */
     cells.forEach((cell, index) => {
         cell.addEventListener('keydown', function(e) {
             const currentRow = Math.floor(index / 2);
@@ -41,6 +54,10 @@ function addTableKeyboardNavigation() {
             
             let newIndex = index;
             
+            /*
+            Switch para distinguir que flecha se presionó junto a la posicion de la tabla en la que nos
+            va a dirigir esa interacción.
+             */
             switch(e.key) {
                 case 'ArrowRight':
                     if (currentCol < 1) {
@@ -70,6 +87,9 @@ function addTableKeyboardNavigation() {
                     break;
             }
             
+            /*
+            Si la nueva posición es válida, mueve el foco a esa celda
+            */
             if (newIndex !== index && newIndex >= 0 && newIndex < cells.length) {
                 e.preventDefault();
                 cells[newIndex].focus();
@@ -78,46 +98,10 @@ function addTableKeyboardNavigation() {
     });
 }
 
-function announceToScreenReader(message) {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    document.body.appendChild(announcement);
-    
-    setTimeout(() => {
-        document.body.removeChild(announcement);
-    }, 1000);
-}
-
+/*
+Funcion que carga el contenido de la tabla al inicializar la pagina.
+Manda a llamar la funcion anterior.
+*/
 window.addEventListener('load', function() {
     loadXMLDoc();
-    
-    setTimeout(() => {
-        const firstCell = document.querySelector('td[tabindex="0"]');
-        if (firstCell) {
-            firstCell.focus();
-        }
-    }, 100);
-});
-
-document.addEventListener('keydown', function(e) {
-    if (e.altKey && e.key === 't') {
-        e.preventDefault();
-        const firstCell = document.querySelector('td[tabindex="0"]');
-        if (firstCell) {
-            firstCell.focus();
-            announceToScreenReader('Enfocado en tabla de ajolotes');
-        }
-    }
-    
-    if (e.altKey && e.key === 'b') {
-        e.preventDefault();
-        const backButton = document.querySelector('.BotonRegresar');
-        if (backButton) {
-            backButton.focus();
-            announceToScreenReader('Enfocado en botón regresar');
-        }
-    }
 });
