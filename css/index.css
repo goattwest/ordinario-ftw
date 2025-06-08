@@ -8,6 +8,8 @@ body {
     background: linear-gradient(to right, pink, lavender);
     background-size: cover;
     max-width: fit-content;
+    margin: 0;
+    padding: 0;
 }
 
 .ParteDelHeader {
@@ -155,13 +157,205 @@ a:visited {
 }
 
 .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      }
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ===== MEDIA QUERIES PARA DISPOSITIVOS MÓVILES ===== */
+
+/* Tablets y dispositivos medianos */
+@media screen and (max-width: 768px) {
+    .TituloIndex {
+        font-size: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .ParteNavegacion {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+    
+    .Navegacion {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .Navegacion a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .Contenido {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .TodoElContenidoEscrito {
+        padding: 30px 20px;
+        font-size: 20px;
+    }
+    
+    .Lateral {
+        order: 2;
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .Tarjetas {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tarjetaUnica {
+        margin: 10px 0;
+        max-width: 90%;
+    }
+    
+    .ImagenAjolote {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+}
+
+/* Móviles */
+@media screen and (max-width: 480px) {
+    body {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    
+    .ParteDelHeader {
+        max-width: 100%;
+        padding: 10px;
+    }
+    
+    .ParteDelTitulo {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .ParteDelTitulo p {
+        font-size: 16px;
+    }
+    
+    .TituloIndex {
+        font-size: 35px;
+        padding: 5px;
+        text-align: center;
+    }
+    
+    .ParteNavegacion {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .Navegacion {
+        font-size: 18px;
+        text-align: center;
+    }
+    
+    .Navegacion a {
+        padding: 12px;
+        margin: 5px 0;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .TodoElContenidoEscrito {
+        padding: 20px 15px;
+        font-size: 18px;
+    }
+    
+    .TodoElContenidoEscrito h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .papuArticulos {
+        padding: 15px;
+        border-radius: 25px;
+        margin: 15px 0;
+    }
+    
+    .ejemploArticulo {
+        padding: 15px 20px;
+        border-radius: 25px;
+        margin-bottom: 15px;
+    }
+    
+    .ContenedorLink {
+        padding: 20px;
+        margin: 15px 0;
+        font-size: 15px;
+        max-width: 100%;
+    }
+    
+    .ContenedorLink img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .Lateral {
+        padding: 15px;
+    }
+    
+    .tarjetaUnica {
+        padding: 20px;
+        margin: 15px 0;
+        max-width: 95%;
+        font-size: 16px;
+    }
+    
+    .tarjetaUnica h5 {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .ImagenAjolote {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+/* Móviles muy pequeños */
+@media screen and (max-width: 320px) {
+    .TituloIndex {
+        font-size: 28px;
+        word-break: break-word;
+    }
+    
+    .TodoElContenidoEscrito {
+        padding: 15px 10px;
+        font-size: 16px;
+    }
+    
+    .Navegacion {
+        font-size: 16px;
+    }
+    
+    .tarjetaUnica {
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .ContenedorLink {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
