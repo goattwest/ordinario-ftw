@@ -1,141 +1,175 @@
-
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
+  
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>El Ajolote - Inicio</title>
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
-  <body>
-    <header class="ParteDelHeader">
+    <link rel="stylesheet" href="./css/index.css">
 
-      <div class="ParteDelTitulo">
-        <p aria-hidden="true">꒰(˶• ᴗ •˶)꒱</p>
-        <h1 class="TituloIndex">El Ajolote</h1>
-        <p aria-hidden="true">꒰(˶• ᴗ •˶)꒱</p>
-      </div>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <header class="ParteDelHeader" role="banner">
+        <div class="ParteDelTitulo">
+            <p aria-hidden="true">꒰(˶• ᴗ •˶)꒱</p>
+            <h1 class="TituloIndex">El Ajolote</h1>
+            <p aria-hidden="true">꒰(˶• ᴗ •˶)꒱</p>
+        </div>
 
-      <div class="ParteNavegacion">
-        <nav id="Navegacion" class="Navegacion" aria-label="Navegación principal">
-          <a href="./tabla.html" aria-describedby="nav-description">Tabla de ajolotes</a>
-          <a href="./login.html" aria-describedby="nav-description2">Regresar al login</a>
-          <span id="nav-description" class="sr-only">Ir a la sección con información detallada de diferentes tipos de ajolotes</span>
-          <span id="nav-description2" class="sr-only">Reggresar a la pagina del login</span>
-        </nav>
-      </div>
-
+        <div class="ParteNavegacion">
+            <nav class="Navegacion" aria-label="Navegación principal" role="navigation">
+                <a href="./tabla.html" 
+                   aria-describedby="nav-description"
+                   title="Ir a la tabla con información detallada de diferentes tipos de ajolotes">
+                   Tabla de ajolotes
+                </a>
+                <a href="./login.html" 
+                   aria-describedby="nav-description2"
+                   title="Regresar a la página de inicio de sesión">
+                   Regresar al login
+                </a>
+            </nav>
+            <div id="nav-description" class="sr-only">Navegar a la sección con información detallada de diferentes tipos de ajolotes</div>
+            <div id="nav-description2" class="sr-only">Regresar a la página del login</div>
+        </div>
     </header>
 
     <div class="Contenido">
-
-      <aside class="Lateral" aria-label="Información adicional y enlaces relacionados">
-
-        <div class="ContenedorLink">
-          <a href="https://i820.photobucket.com/albums/zz130/SirKristoff2/3e3e8c6c.jpg" aria-label="Enlace para obtener más información sobre nosotros">Más Información</a>
-        </div>
-
-        <div class="ContenedorLink">
-          <img src="https://img.utdstc.com/icon/214/979/2149796275b30306382089f0c12a82680b55568d4b528d63e1dd159b22d4c610:200" alt="Icono del juego Angry Birds Star Wars">
-          <p>Descarga gratis de Angry Birds Star Wars 2025 link mega</p>
-          <a href="https://angry-birds-star-wars.uptodown.com/android" aria-label="Descargar Angry Birds Star Wars desde Uptodown">Descargar Angry Birds Star Wars</a>
-        </div>
-
-        <div class="ContenedorLink">
-          <img src="https://img.utdstc.com/icon/119/321/1193214e833c3d688a397f3e1b360410ac43304b2be5ae47faf9feaff9acec1e:200" alt="Icono del juego Angry Birds Star Wars">
-          <p>Descarga gratis de Angry Birds Space 2025 link mega</p>
-          <a href="https://angry-birds-space.uptodown.com/android" aria-label="Descargar Angry Birds Space desde Uptodown">Descargar Angry Birds Space</a>
-        </div>
-
-      </aside>
-
-      <main class="TodoElContenidoEscrito" role="main" aria-label="Contenido principal sobre ajolotes">
-
-        <section aria-labelledby="que-es-ajolote">
-          <h2 id="que-es-ajolote">¿Qué es un ajolote?</h2>
-          <p>
-          El ajolote, conocido científicamente como <em>Ambystoma mexicanum</em>, es un
-          extraordinario anfibio endémico de los canales de Xochimilco, en la
-          Ciudad de México. Su aspecto es inconfundible: con su carita
-          sonriente, sus branquias externas que parecen plumas y su habilidad
-          única para regenerar partes de su cuerpo, el ajolote se ha convertido
-          en un símbolo de la biodiversidad mexicana. Esta especie, también
-          llamada el <q>monstruo de agua</q> por los antiguos aztecas, ha captado la
-          atención no solo de científicos, sino también del público en general
-          debido a su relevancia ecológica y su papel en estudios científicos
-          avanzados.
-          </p>
-        </section>
-
-        <section aria-labelledby="origen-ajolote">
-          <h2 id="origen-ajolote">Origen</h2>
-          <p>
-          El ajolote originario y endémico de los lagos del Valle de México y
-          que sobrevive en el lago de Xochimilco, fue llamado por los antiguos
-          mexicanos <em>axolotl</em> (del náhuatl, <q>monstruo de agua</q>) y conserva
-          características milenarias de las salamandras, pero es más cercano a
-          ranas y sapos.
-          </p>
-          
-        </section>
-
-        <section class="papuArticulos" aria-labelledby="articulos-interes">
-          <h3 id="articulos-interes" class="tituloArticulos">Artículos de Interés</h3>
-
-          <article class="ejemploArticulo" aria-labelledby="articulo-minecraft">
-            <h4 id="articulo-minecraft">¿Acaso hay Ajolotes en Minecraft?</h4>
-            <p>
-              <img class="pfp" src="https://media.tenor.com/5LfI3UXUGwkAAAAe/damn-bird.png" alt="Imagen de perfil de usuario">
-              <strong>Publicado por:</strong> 
-              Usuario Random
-            </p>
-            <p>
-              ¿Alguien sabe si esto es real? Es que la otra vez mi hijo
-              me enseñó su mundo de Minecraft y me pareció haber visto uno...
-            </p>
-          </article>
-
-          <article class="ejemploArticulo" aria-labelledby="articulo-donde-conseguir">
-            <h4 id="articulo-donde-conseguir">¿Dónde consigo un Ajolote?</h4>
-            <p>
-              <img class="pfp" src="https://media.tenor.com/5LfI3UXUGwkAAAAe/damn-bird.png" alt="Imagen de perfil de usuario">
-              <strong>Publicado por:</strong> 
-              Usuario Random
-            </p>
-            <p>
-              Me gustan muchísimo los ajolotes y a decir verdad me gustaría
-              tener uno como mascota. ¿Alguien sabe dónde puedo encontrar uno?
-              ¿O saben cómo es el proceso de adquisición de una de estas criaturas?
-            </p>
-          </article>
-        </section>
-
-        <section aria-labelledby="tipos-ajolotes" id="tabla-ajolotes">
-          <h2 id="tipos-ajolotes">Algunos tipos de Ajolotes</h2>
-          <div id="Tarjetas" class="Tarjetas" role="list" aria-label="Lista de diferentes tipos de ajolotes">
-
-            <div class="tarjetaUnica" role="listitem" aria-labelledby="ajolote-silvestre">
-              <img class="ImagenAjolote" src="https://puebla-es.acuariomichin.com/wp-content/uploads/2021/07/ajolote-peligro-de-extincion-1024x640.jpg" alt="Ajolote silvestre de color negro en su hábitat natural">
-              <h5 id="ajolote-silvestre">Ajolote Silvestre</h5>
-              <p>Su hábitat natural se encuentra principalmente en los lagos de Xochimilco y otras áreas del Valle de México.</p>
+        <aside class="Lateral" role="complementary" aria-label="Información adicional y enlaces relacionados">
+            <div class="ContenedorLink">
+                <h3>Información Adicional</h3>
+                <p>Descubre más sobre estos fascinantes anfibios</p>
+                <a href="https://i820.photobucket.com/albums/zz130/SirKristoff2/3e3e8c6c.jpg" 
+                   aria-label="Enlace para obtener más información sobre ajolotes"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   Más Información
+                </a>
             </div>
 
-            <div class="tarjetaUnica" role="listitem" aria-labelledby="ajolote-leucistico">
-              <img class="ImagenAjolote" src="https://cdn.shopify.com/s/files/1/0692/0015/0820/files/Ajolote_Leucistico_Blog.jpg?v=1742844116" alt="Ajolote leucístico de color rosado con branquias rojas y ojos negros">
-              <h5 id="ajolote-leucistico">Ajolote Leucístico</h5>
-              <p>Este es uno de los fenotipos más populares. Su piel es de color rosado con branquias rojas y ojos negros.</p>
+            <div class="ContenedorLink">
+                <h3>Juegos Relacionados</h3>
+                <img src="https://img.utdstc.com/icon/214/979/2149796275b30306382089f0c12a82680b55568d4b528d63e1dd159b22d4c610:200" 
+                     alt="Icono del juego Angry Birds Star Wars">
+                <p>Descarga gratis Angry Birds Star Wars 2025</p>
+                <a href="https://angry-birds-star-wars.uptodown.com/android" 
+                   aria-label="Descargar Angry Birds Star Wars desde Uptodown"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   Descargar Angry Birds Star Wars
+                </a>
             </div>
 
-            <div class="tarjetaUnica" role="listitem" aria-labelledby="ajolote-albino">
-              <img class="ImagenAjolote" src="https://cdn.shopify.com/s/files/1/0692/0015/0820/files/Ajolote_Albino_Dorado_Blog.jpg?v=1742844370" alt="Ajolote albino dorado de color amarillo con ojos rojos">
-              <h5 id="ajolote-albino">Ajolote Albino Dorado</h5>
-              <p>El ajolote albino dorado tiene un color amarillo o dorado con ojos rojos.</p>
+            <div class="ContenedorLink">
+                <h3>Más Juegos</h3>
+                <img src="https://img.utdstc.com/icon/119/321/1193214e833c3d688a397f3e1b360410ac43304b2be5ae47faf9feaff9acec1e:200" 
+                     alt="Icono del juego Angry Birds Space">
+                <p>Descarga gratis Angry Birds Space 2025</p>
+                <a href="https://angry-birds-space.uptodown.com/android" 
+                   aria-label="Descargar Angry Birds Space desde Uptodown"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   Descargar Angry Birds Space
+                </a>
             </div>
+        </aside>
 
-          </div>
-        </section>
+        <main id="main-content" class="TodoElContenidoEscrito" role="main" aria-label="Contenido principal sobre ajolotes">
+            <section aria-labelledby="que-es-ajolote">
+                <h2 id="que-es-ajolote">¿Qué es un ajolote?</h2>
+                <p>
+                    El ajolote, conocido científicamente como <em>Ambystoma mexicanum</em>, es un
+                    extraordinario anfibio endémico de los canales de Xochimilco, en la
+                    Ciudad de México. Su aspecto es inconfundible: con su carita
+                    sonriente, sus branquias externas que parecen plumas y su habilidad
+                    única para regenerar partes de su cuerpo, el ajolote se ha convertido
+                    en un símbolo de la biodiversidad mexicana. Esta especie, también
+                    llamada el <q>monstruo de agua</q> por los antiguos aztecas, ha captado la
+                    atención no solo de científicos, sino también del público en general
+                    debido a su relevancia ecológica y su papel en estudios científicos
+                    avanzados.
+                </p>
+            </section>
 
-      </main>
+            <section aria-labelledby="origen-ajolote">
+                <h2 id="origen-ajolote">Origen</h2>
+                <p>
+                    El ajolote es originario y endémico de los lagos del Valle de México y
+                    sobrevive en el lago de Xochimilco. Fue llamado por los antiguos
+                    mexicanos <em>axolotl</em> (del náhuatl, <q>monstruo de agua</q>) y conserva
+                    características milenarias de las salamandras, pero es más cercano a
+                    ranas y sapos.
+                </p>
+            </section>
+
+            <section class="papuArticulos" aria-labelledby="articulos-interes">
+                <h3 id="articulos-interes" class="tituloArticulos">Artículos de Interés</h3>
+
+                <article class="ejemploArticulo" aria-labelledby="articulo-minecraft">
+                    <h4 id="articulo-minecraft">¿Acaso hay Ajolotes en Minecraft?</h4>
+                    <p>
+                        <img class="pfp" 
+                             src="https://media.tenor.com/5LfI3UXUGwkAAAAe/damn-bird.png" 
+                             alt="Avatar del usuario que escribió este artículo">
+                        <strong>Publicado por:</strong> 
+                        Usuario Random
+                    </p>
+                    <p>
+                        ¿Alguien sabe si esto es real? Es que la otra vez mi hijo
+                        me enseñó su mundo de Minecraft y me pareció haber visto uno...
+                    </p>
+                </article>
+
+                <article class="ejemploArticulo" aria-labelledby="articulo-donde-conseguir">
+                    <h4 id="articulo-donde-conseguir">¿Dónde consigo un Ajolote?</h4>
+                    <p>
+                        <img class="pfp" 
+                             src="https://media.tenor.com/5LfI3UXUGwkAAAAe/damn-bird.png" 
+                             alt="Avatar del usuario que escribió este artículo">
+                        <strong>Publicado por:</strong> 
+                        Usuario Random
+                    </p>
+                    <p>
+                        Me gustan muchísimo los ajolotes y a decir verdad me gustaría
+                        tener uno como mascota. ¿Alguien sabe dónde puedo encontrar uno?
+                        ¿O saben cómo es el proceso de adquisición de una de estas criaturas?
+                    </p>
+                </article>
+            </section>
+
+            <section aria-labelledby="tipos-ajolotes">
+                <h2 id="tipos-ajolotes">Algunos tipos de Ajolotes</h2>
+                <div class="Tarjetas" role="list" aria-label="Lista de diferentes tipos de ajolotes">
+
+                    <div class="tarjetaUnica" role="listitem" tabindex="0" aria-labelledby="ajolote-silvestre">
+                        <img class="ImagenAjolote" 
+                             src="https://puebla-es.acuariomichin.com/wp-content/uploads/2021/07/ajolote-peligro-de-extincion-1024x640.jpg" 
+                             alt="Ajolote silvestre de color negro nadando en su hábitat natural acuático">
+                        <h5 id="ajolote-silvestre">Ajolote Silvestre</h5>
+                        <p>Su hábitat natural se encuentra principalmente en los lagos de Xochimilco y otras áreas del Valle de México. Es la variedad original y se encuentra en peligro crítico de extinción.</p>
+                    </div>
+
+                    <div class="tarjetaUnica" role="listitem" tabindex="0" aria-labelledby="ajolote-leucistico">
+                        <img class="ImagenAjolote" 
+                             src="https://cdn.shopify.com/s/files/1/0692/0015/0820/files/Ajolote_Leucistico_Blog.jpg?v=1742844116" 
+                             alt="Ajolote leucístico de color rosado claro con branquias rojas y ojos negros distintivos">
+                        <h5 id="ajolote-leucistico">Ajolote Leucístico</h5>
+                        <p>Este es uno de los fenotipos más populares en cautiverio. Su piel es de color rosado con branquias rojas brillantes y ojos negros, resultado de una mutación genética.</p>
+                    </div>
+
+                    <div class="tarjetaUnica" role="listitem" tabindex="0" aria-labelledby="ajolote-albino">
+                        <img class="ImagenAjolote" 
+                             src="https://cdn.shopify.com/s/files/1/0692/0015/0820/files/Ajolote_Albino_Dorado_Blog.jpg?v=1742844370" 
+                             alt="Ajolote albino dorado de color amarillo brillante con ojos rojos característicos del albinismo">
+                        <h5 id="ajolote-albino">Ajolote Albino Dorado</h5>
+                        <p>El ajolote albino dorado presenta un hermoso color amarillo o dorado con ojos rojos, característicos del albinismo. Es muy apreciado por su belleza única.</p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
     </div>
-  </body>
+</body>
 </html>

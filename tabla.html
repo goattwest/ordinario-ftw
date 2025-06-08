@@ -4,29 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Ajolote - Tabla de Información</title>
-    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/tabla.css">
 </head>
 <body>
-    <header class="ParteDelHeader" role="banner" aria-label="Encabezado principal de la página">
-        <h1 class="sr-only">El Ajolote - Tabla de Información</h1>
-    </header>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <header class="ParteDelHeader" role="banner"></header>
 
-    <main class="PartePrincipal" role="main" aria-label="Contenido principal con tabla de ajolotes">
+    <nav class="navegacion-principal" aria-label="Navegación principal" role="navigation">
+        <div class="sr-only">
+            <p>Use las teclas de flecha para navegar por la tabla. Presione Tab para navegar entre elementos interactivos.</p>
+        </div>
+    </nav>
+
+    <main class="PartePrincipal" role="main" id="main-content">
         
         <section class="ParteDeTabla" aria-labelledby="tabla-titulo">
-            <h2 id="tabla-titulo" class="sr-only">Tabla de información sobre ajolotes</h2>
-            <div role="region" aria-label="Tabla de datos de ajolotes" tabindex="0">
-                <table id="demo" aria-label="Información detallada sobre diferentes tipos de ajolotes" aria-describedby="tabla-descripcion">
-                    <!-- El contenido de la tabla se genera dinámicamente con JavaScript -->
+            <h2 id="tabla-titulo" class="tabla-titulo">Información sobre Ajolotes</h2>
+            
+            <div class="tabla-container" role="region" aria-label="Tabla de datos de ajolotes" tabindex="0">
+                <table id="demo" role="table" aria-labelledby="tabla-titulo" aria-describedby="tabla-descripcion">
                 </table>
-                <p id="tabla-descripcion" class="sr-only">
-                    Esta tabla contiene información detallada sobre diferentes tipos de ajolotes, incluyendo sus características y propiedades.
-                </p>
+                <div id="tabla-descripcion" class="sr-only">
+                    Esta tabla contiene información detallada sobre diferentes tipos de ajolotes, incluyendo sus nombres y descripciones. Use las teclas de flecha para navegar entre las celdas.
+                </div>
             </div>
         </section>
 
         <section class="ParteDelBoton" aria-labelledby="navegacion-titulo">
-            <h2 id="navegacion-titulo" class="sr-only">Contenedor del boton para regresar</h2>
+            <h2 id="navegacion-titulo" class="sr-only">Navegación de regreso</h2>
             <button 
                 class="BotonRegresar" 
                 onclick="window.location.href = './index.html'"
@@ -39,9 +45,10 @@
 
     </main>
 
-    <footer class="ParteDelFooter" role="contentinfo" aria-label="Pie de página">
-        <p class="sr-only">Fin del contenido de la página</p>
+    <footer class="ParteDelFooter" role="contentinfo">
+        <p class="sr-only">Fin del contenido de la página - El Ajolote</p>
     </footer>
+
+    <script src="./js/tabla.js"></script>
 </body>
-<script src="./js/tabla.js"></script>
 </html>

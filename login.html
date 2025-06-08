@@ -7,116 +7,133 @@
     <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-    <header class="ParteDelHeader" role="banner" aria-label="Encabezado principal de la página">
-        <h1 class="sr-only">El Ajolote - Página de Inicio de Sesión</h1>
-    </header>
 
-    <main class="PartePrincipal" role="main" aria-label="Formulario de inicio de sesión">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <header class="ParteDelHeader" role="banner" aria-label="Encabezado principal de la página"></header>
+
+    <main id="main-content" class="PartePrincipal" role="main" aria-label="Formulario de inicio de sesión">
         
         <section class="ParteDelTitulo" aria-labelledby="titulo-principal">
-            <h1 id="titulo-principal" class="TituloLogin">El Ajolote</h1>
+            <h2 id="titulo-principal" class="TituloLogin">El Ajolote</h2>
         </section>
 
-        <section aria-labelledby="form-titulo">
-            <h2 id="form-titulo" class="sr-only">Formulario de inicio de sesión</h2>
+        <section aria-labelledby="form-section-title">
+            <h3 id="form-section-title" class="sr-only">Formulario de inicio de sesión</h3>
+            
+            <div id="status-messages" aria-live="polite" aria-atomic="true"></div>
             
             <form 
                 id="Login" 
                 role="form"
-                aria-labelledby="form-titulo"
+                aria-labelledby="form-section-title"
                 aria-describedby="form-descripcion"
                 novalidate
             >
-                <p id="form-descripcion" class="sr-only">
-                    Complete los campos de usuario y contraseña para acceder al sitio
-                </p>
-                
-                <fieldset class="Formulario" role="group" aria-labelledby="credenciales-grupo">
-                    <legend id="credenciales-grupo" class="sr-only">Credenciales de acceso</legend>
+                <fieldset class="Formulario fieldset-legend" role="group" aria-labelledby="credenciales-grupo">
+                    <legend id="credenciales-grupo" class="sr-only">Forulario de acceso</legend>
                     
-                    <label 
-                        for="username" 
-                        aria-label="Campo obligatorio para nombre de usuario"
-                    >
-                        Nombre de usuario <span aria-label="obligatorio">*</span>
-                    </label>
-                    <input 
-                        type="text" 
-                        id="username" 
-                        name="username"
-                        placeholder="Ingrese su usuario"
-                        aria-required="true"
-                        aria-invalid="false"
-                        aria-describedby="errorUser username-help"
-                        autocomplete="username"
-                    >
-                    <p id="username-help" class="sr-only">
-                        Ingrese su nombre de usuario registrado
+                    <p id="form-descripcion" class="sr-only">
+                        Complete los campos de usuario y contraseña para acceder al sitio. Los campos marcados con asterisco son obligatorios.
                     </p>
-                    <label 
-                        id="errorUser" 
-                        class="error" 
-                        for="username" 
-                        role="alert"
-                        aria-live="polite"
-                        hidden
-                    >
-                        Usuario vacío
-                    </label>
                     
-                    <label 
-                        for="password"
-                        aria-label="Campo obligatorio para contraseña"
-                    >
-                        Contraseña <span aria-label="obligatorio">*</span>
-                    </label>
-                    <input 
-                        type="password" 
-                        id="password" 
-                        name="password"
-                        placeholder="Ingrese su contraseña"
-                        aria-required="true"
-                        aria-invalid="false"
-                        aria-describedby="errorPass password-help"
-                        autocomplete="current-password"
-                    >
-                    <p id="password-help" class="sr-only">
-                        Ingrese su contraseña
-                    </p>
-                    <label 
-                        id="errorPass" 
-                        class="error" 
-                        for="password" 
-                        role="alert"
-                        aria-live="polite"
-                        hidden
-                    >
-                        Contraseña vacía
-                    </label>
+                    <div class="input-group">
+                        <label 
+                            for="username" 
+                            aria-label="Campo obligatorio para nombre de usuario"
+                        >
+                            Nombre de usuario 
+                            <span class="required-asterisk" aria-label="obligatorio">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username"
+                            placeholder="Ingrese su usuario"
+                            aria-required="true"
+                            aria-invalid="false"
+                            aria-describedby="username-help"
+                            autocomplete="username"
+                            minlength="3"
+                            maxlength="20"
+                        >
+                        <p id="username-help" class="sr-only">
+                            Ingrese su nombre de usuario registrado. Debe tener entre 3 y 20 caracteres.
+                        </p>
+                        <span 
+                            id="errorUser" 
+                            class="error" 
+                            role="alert"
+                            aria-live="polite"
+                            hidden
+                        >
+                            Por favor, ingrese un nombre de usuario válido
+                        </span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label 
+                            for="password"
+                            aria-label="Campo obligatorio para contraseña"
+                        >
+                            Contraseña 
+                            <span class="required-asterisk" aria-label="obligatorio">*</span>
+                        </label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password"
+                            placeholder="Ingrese su contraseña"
+                            aria-required="true"
+                            aria-invalid="false"
+                            aria-describedby="password-help"
+                            autocomplete="current-password"
+                            minlength="6"
+                        >
+                        <p id="password-help" class="sr-only">
+                            Ingrese su contraseña. Debe tener al menos 6 caracteres.
+                        </p>
+                        <span 
+                            id="errorPass" 
+                            class="error" 
+                            role="alert"
+                            aria-live="polite"
+                            hidden
+                        >
+                            Por favor, ingrese una contraseña válida
+                        </span>
+                    </div>
                     
                     <button 
                         type="button" 
                         class="BotonInicioSesion" 
-                        onclick="validacionVacio()"
                         aria-describedby="boton-descripcion"
-                        aria-live="polite"
+                        onclick="validacionVacio()"
                     >
-                        Iniciar Sesión
+                        <span>Iniciar Sesión</span>
                     </button>
                     <p id="boton-descripcion" class="sr-only">
-                        Presione para validar sus credenciales e iniciar sesión
+                        Presione para validar sus credenciales e iniciar sesión en el sitio
                     </p>
                 </fieldset>
             </form>
+            
+            <div class="navegacion-container">
+                <a href="https://www.youtube.com/watch?v=7BYie1hdU1s" 
+                   class="BotonRegresar"
+                   aria-label="Redirección a un video gracioso"
+                   title="Video chistoso">
+                   Video Chistoso
+                </a>
+            </div>
         </section>
 
     </main>
 
     <footer class="ParteDelFooter" role="contentinfo" aria-label="Pie de página">
-        <p class="sr-only">Fin del contenido de la página</p>
+        <p>© 2025 El Ajolote - Todos los derechos reservados</p>
     </footer>
+
+    <script src="./js/login.js"></script>
 </body>
-
-<script src="./js/login.js"></script>
-
 </html>
